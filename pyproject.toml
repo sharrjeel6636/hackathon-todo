@@ -1,0 +1,13 @@
+[project]
+name = "hackathon-todo"
+version = "0.1.0"
+description = "Phase I: In-Memory Python Console Todo Application"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[tool.uv]
+dev-dependencies = []
+
+[tool.uv.scripts]
+run = "python src/main.py"
