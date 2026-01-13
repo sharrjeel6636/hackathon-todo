@@ -5,15 +5,11 @@ param(
 )
 
 # Define the feature directory and available documents
-$featureDir = "specs\phase-1"
+$featureDir = "specs\phase-2"
 $availableDocs = @(
-    "001-in-memory-console-app.md",    # spec
-    "002-implementation-plan.md",      # plan
-    "003-tasks-breakdown.md",          # tasks
-    "research.md",                     # research
-    "data-model.md",                   # data model
-    "quickstart.md",                   # quickstart
-    "contracts\todo-api-contract.md"   # contracts
+    "001-fullstack-web-app.md",    # spec
+    "002-implementation-plan.md",  # plan
+    "003-tasks-breakdown.md"       # tasks
 )
 
 # Check if tasks.md exists

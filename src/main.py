@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.append(os.path.dirname(__file__))
+
 from operations import TaskManager
 from models import Task
 
@@ -22,7 +26,8 @@ def handle_user_input():
 
 
 def main():
-    manager = TaskManager()
+    # Initialize the task manager with database
+    manager = TaskManager(db_path="todo.db")
 
     while True:
         display_menu()

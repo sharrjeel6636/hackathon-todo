@@ -49,10 +49,4 @@ Research tasks to resolve all NEEDS CLARIFICATION markers.
 - [x] Quickstart guide created in quickstart.md
 - [x] Agent context updated with new technologies
 
-## Phase 2: Implementation Planning
-
-- [x] Break down implementation into atomic tasks - will be handled by /sp.tasks
-- [x] Define success criteria for each task - captured in feature spec
-- [x] Plan verification steps - run with `uv run src/main.py` and test all 5 functions
-- [x] Confirm all artifacts generated and stored in specs/ folder
 

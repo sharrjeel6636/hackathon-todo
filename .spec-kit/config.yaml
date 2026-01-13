@@ -1,0 +1,31 @@
+# Spec-Kit Plus Configuration
+version: 1.0
+project:
+  name: "Hackathon Todo App"
+  description: "Full-stack todo application with authentication and persistent storage"
+  phases:
+    - phase-1: "Console-based todo app with in-memory storage"
+    - phase-2: "Full-stack web app with Next.js, FastAPI, SQLModel, Better Auth"
+    - phase-3: "AI chatbot integration"
+    - phase-4: "Containerization and orchestration"
+    - phase-5: "Cloud-native deployment"
+
+specifications:
+  directory: "specs"
+  template: ".specify/templates/spec-template.md"
+
+plans:
+  directory: "specs"
+  template: ".specify/templates/plan-template.md"
+
+tasks:
+  directory: "specs"
+  template: ".specify/templates/tasks-template.md"
+
+artifacts:
+  history: "history/prompts"
+  adr: "history/adr"
+
+agents:
+  default: "qwen"
+  configuration: ".specify/memory/constitution.md"

@@ -1,13 +1,13 @@
-[project]
-name = "hackathon-todo"
-version = "0.1.0"
-description = "Phase I: In-Memory Python Console Todo Application"
-readme = "README.md"
-requires-python = ">=3.13"
-dependencies = []
-
 [tool.uv]
-dev-dependencies = []
+package = true
 
-[tool.uv.scripts]
-run = "python src/main.py"
+[project]
+name = "hackathon-todo-cli"
+version = "0.1.0"
+dependencies = [
+  "sqlmodel",
+  "python-dotenv"
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]

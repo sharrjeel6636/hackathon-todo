@@ -1,10 +1,11 @@
-from dataclasses import dataclass
+from sqlmodel import SQLModel, Field
 from typing import Optional
+from datetime import datetime
 
 
-@dataclass
-class Task:
-    id: int
-    title: str
-    description: Optional[str] = None
-    completed: bool = False
+class Task(SQLModel, table=True):
+    id: Optional[int] = Field(default=None, primary_key=True)
+    title: str = Field(min_length=1, max_length=255)
+    description: Optional[str] = Field(default=None, max_length=1000)
+    completed: bool = Field(default=False)
+    created_at: Optional[datetime] = Field(default_factory=datetime.now)

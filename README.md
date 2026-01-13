@@ -1,28 +1,45 @@
-# Hackathon II Phase I – In-Memory Todo Console App
+# Hackathon Todo CLI Application
 
-A simple command-line todo application that stores tasks in memory.
+A command-line interface todo application with advanced filtering capabilities.
+
+## Features
+
+- Task management (Create, Read, Update, Delete, Mark Complete)
+- Database-powered storage
+- Console-based user interface
+
+## Tech Stack
+
+- **CLI Application**: Python with SQLModel
+- **Database**: Local SQLite database
 
 ## Setup
 
-```bash
-uv sync
-uv run src/main.py
-```
+1. Clone the repository
+2. Install dependencies: `uv sync`
+3. Create a `.env` file based on `.env.example` with your database configuration:
+   ```
+   DATABASE_URL="sqlite:///./todo.db"
+   ```
 
-## Usage
+## Running the Application
 
-Run the application with `uv run src/main.py` and follow the menu prompts to add, view, update, delete, and mark tasks as complete.
+1. Run the console application: `python main.py console`
+2. Run tests: `python main.py test`
+3. Run database migrations: `python main.py migrate`
+4. Or run the demo: `python demo_app.py`
 
-### Menu Options
+## CLI Commands
 
-1. Add task - Create a new task with title and optional description
-2. View all tasks - Display all tasks in a formatted table
-3. Update task - Modify an existing task's title or description
-4. Delete task - Remove a task from the list
-5. Toggle complete - Mark a task as complete/incomplete
-6. Exit - Quit the application
+The application supports the following commands:
 
-### Sample Output
+- `python main.py console` - Starts the interactive console application
+- `python main.py test` - Runs the application tests
+- `python main.py migrate` - Runs database migrations
+
+## Console Application Usage
+
+The console application provides an interactive menu system for managing your tasks:
 
 ```
 Todo CLI Menu:
@@ -32,32 +49,20 @@ Todo CLI Menu:
 4. Delete task
 5. Toggle complete
 6. Exit
-
-Enter your choice (1-6): 1
-Enter task title: Buy groceries
-Enter task description (optional): Milk, eggs, bread
-Task added successfully with ID: 1
-
-Enter your choice (1-6): 2
-ID   Status   Title                Description
------------------------------------------------------------------
-1    [ ]      Buy groceries        Milk, eggs, bread
-
-Enter your choice (1-6): 5
-Enter task ID to toggle: 1
-Task with ID 1 marked as completed.
 ```
 
-## Demo Video Key Interactions
+## Usage Examples
 
-For the <90-second demo video, follow these key interactions:
+### Managing Tasks
+1. Run the console application: `python main.py console`
+2. Use the menu options to add, view, update, or delete tasks
+3. Follow the prompts to interact with the application
 
-1. **Add a task**: Select option 1, enter "Buy groceries" as title, "Milk, eggs, bread" as description
-2. **View tasks**: Select option 2 to see the formatted table with your task
-3. **Update a task**: Select option 3, enter the task ID, and modify the description
-4. **Mark as complete**: Select option 5, enter the task ID to toggle completion status
-5. **Delete a task**: Select option 4, enter the task ID to remove it
+## Security Features
 
-## Note
+- Secure database storage
 
-This project follows strict spec-driven development with 100% code generation via Claude Code.
+## Performance Optimizations
+
+- Optimized database queries
+- Efficient data handling
